@@ -154,13 +154,15 @@ button {
 }
 
 
-.announcements>p {
+.announcements>p,
+.trends>p {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
-.announcement-wrapper {
+.announcement-wrapper,
+.trend-wrapper {
     background-color: white;
     padding: 10px 20px;
     border-radius: 0.5em;
@@ -170,24 +172,46 @@ button {
     font-size: 13px;
 }
 
-.announcement-parts p:first-child {
+.announcement-parts p:first-child,
+.trend-parts p span {
     padding-top: 10px;
     font-weight: 600;
     font-size: 14px;
+    color: black
 }
 
-.announcement-parts p:last-child {
+.announcement-parts p:last-child,
+.trend-parts p {
     padding-bottom: 15px;
     border-bottom: 1px solid rgb(189, 189, 189);
     color: rgb(105, 105, 105);
-
 }
+
+
 
 /* to eliminate last bottom border on announcement parts */
 .announcement-parts:last-of-type p {
     border: none;
 }
 
-.trends {
-    background-color: rgb(49, 49, 49);
+.trend-parts {
+    display: grid;
+    grid-template: 60px/65px 1fr;
+    align-content: center;
+    margin: 10px 0;
+}
+
+div img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    grid-row: 1/3;
+}
+
+.trend-parts p {
+    margin-left: 10px;
+    align-self: center;
+    border: none;
+    padding: 0px;
+    font-size: 14px;
 }
