@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap');
 
+:root {
+    --sidebar-2nd-row-height: calc(100vh - 170px);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -18,7 +22,7 @@ a {
 body {
     display: grid;
     background-color: #e2e8f0;
-    grid-template: 170px calc(100vh - 170px)/280px 1fr;
+    grid-template: 170px minmax(75vh, auto)/max(21vw, 235px) 1fr;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -27,14 +31,14 @@ body {
 .sidebar {
     background-color: #1992d4;
     grid-row: 1/3;
-    display: flex;
-    flex-direction: column;
+    display: grid;
     padding: 20px;
     color: white;
     gap: 40px;
     font-size: 20px;
     font-weight: 500;
     padding-left: 70px;
+    align-content: start;
 }
 
 .sidebar .logo {
@@ -45,14 +49,110 @@ body {
     margin: 20px 0;
 }
 
-
-
 /* header---------------------- */
 .header {
     background-color: #ffffff;
     grid-column: 2/3;
+    padding: 0 40px;
+    display: grid;
+    grid-template: 1fr 1fr/1fr;
+    align-items: center;
+    /* justify-items: end; */
+    font-size: 20px;
 }
 
+.header input {
+    margin-left: 20px;
+    appearance: none;
+    border-radius: 2em;
+    outline: none;
+    background-color: #e2e8f0;
+    border: none;
+    height: 30px;
+    width: max(420px, 40vw);
+    padding: 0 20px;
+    font-size: 16px;
+}
+
+.search-bar-row {
+    display: grid;
+    grid-template-columns: auto 1fr repeat(2, auto) 120px;
+    align-items: center;
+    justify-items: start;
+}
+
+.search-bar-row div {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+.search-bar-row p {
+    display: inline;
+    justify-self: center;
+    font-weight: 600;
+}
+
+.fa-bell {
+    margin: 0 10px;
+}
+
+.user-profile-row {
+    display: grid;
+    grid-template-columns: auto 1fr repeat(3, auto);
+    align-items: center;
+}
+
+.user-profile-row div:empty {
+    height: 65px;
+    width: 65px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.user-info {
+    margin-left: 20px;
+}
+
+.user-info p {
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.user-info p:first-child {
+    font-size: 14px;
+}
+
+button {
+    appearance: none;
+    font-weight: 500;
+    font-size: 16px;
+    height: 35px;
+    width: 90px;
+    border: none;
+    background-color: #1992d4;
+    color: white;
+    border-radius: 2em;
+    /* margin: 0 clamp(3px, 1.5vw, 20px); */
+    /* margin: 0 5vw; */
+    margin: 0 1.5vw;
+    /* margin: min(18px, 1vw); */
+    /* margin: 0 20px; */
+
+}
+
+
+
+
+
+
+
+
+
+/* main content------------------ */
 .main-content {
     background-color: #e2e8f0;
 }

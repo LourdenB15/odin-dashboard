@@ -7,10 +7,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <div class="header"></div>
+    <div class="header">
+        <div class="search-bar-row">
+            <label for="search-bar"><i class="fa-solid fa-magnifying-glass"></i></label>
+            <input type="text" name="search-bar" id="search-bar">
+            <a href=""><i class="fa-regular fa-lg fa-bell" style="color: #000000;"></i></a>
+            <a href="">
+                <div></div>
+            </a>
+            <p>Lodu Bayris</p>
+        </div>
+        <div class="user-profile-row">
+            <div></div>
+            <div class="user-info">
+                <p>Hi there,</p>
+                <p>Lodu Bayris (@ijws)</p>
+            </div>
+            <button>New</button>
+            <button>Upload</button>
+            <button>Share</button>
+        </div>
+    </div>
     <div class="sidebar">
         <div class="logo">
             <a href="">
@@ -49,7 +72,12 @@
             </a>
         </ul>
     </div>
-    <div class="main-content"></div>
+
+    <div class="main-content">
+        <div class="projects"></div>
+        <div class="announcements"></div>
+        <div class="trends"></div>
+    </div>
 </body>
 
 </html>
